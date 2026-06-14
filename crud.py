@@ -6,6 +6,9 @@ from sqlalchemy import or_, func
 from models import Patient
 from schemas import PatientCreate
 
+from typing import Optional
+
+
 
 async def create_patient(db: AsyncSession, data: PatientCreate) -> Patient:
     patient = Patient(
@@ -73,8 +76,7 @@ async def search_patients(db: AsyncSession, query: str, page: int, page_size: in
         "patients": patients,
     }
 
-
-async def get_patient_by_id(db: AsyncSession, patient_id: int) -> Patient | None:
+async def get_patient_by_id(db: AsyncSession, patient_id: int) -> Optional[Patient]:
     result = await db.execute(select(Patient).where(Patient.id == patient_id))
     return result.scalar_one_or_none()
 
