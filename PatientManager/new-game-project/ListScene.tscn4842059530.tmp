@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bb4f3rulr4gxn"]
+
+[ext_resource type="Script" uid="uid://0cy634gcn44t" path="res://ListScene.gd" id="1_cwmqd"]
+
+[node name="Control" type="Control" unique_id=1523646827]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+offset_top = 648.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cwmqd")
